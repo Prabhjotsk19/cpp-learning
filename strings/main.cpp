@@ -20,8 +20,8 @@ void print_call_value(string str1, int length_of_str1){
 	}
 }
 
-// Print string characters -> call by refernce
-void print_call_reference(string *str2, int length_of_str2){
+// Print string characters -> call by reference
+void print_call_reference(string &str2, int length_of_str2){
 	cout << "Print string characters \n";
 	for (int i = 0; i < length_of_str2; ++i){
 		cout << str2[i] << " ";
@@ -137,8 +137,9 @@ int main(){
 	cout << "\n";
 	// Passing strings to Functions
 	print_call_value(fruits, length_of_fruits);
+	cout << endl;
 	//print_call_refernce()
-	// print_call_reference(&fruits, length_of_fruits);
+	print_call_reference(fruits, length_of_fruits);
 
 	// print base address of fruits string
 	cout <<"\n" << &fruits ;
